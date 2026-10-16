@@ -16,7 +16,7 @@ def add_expense(amount, category="Misc", note=""):
     if amount <= 0:
         print("Ignoring invalid amount", amount)
         return False
-    expenses.append({"amount" : amount, "category": category,
+    expenses.append({"amount": amount, "category": category,
                      "note": note, "time": datetime.now().isoformat()})
     return True
 
@@ -44,6 +44,7 @@ def remaining_budget():
 def biggest_expense():
     """Return the largest expense, or None if there are none."""
     return max(expenses, key=lambda expense: expense["amount"], default=None)
+
 
 def print_ledger():
     """Print every expense with a running index."""
@@ -84,10 +85,11 @@ def main():
     set_budget(5000)
     print_ledger()
     print("Totals:", total_by_category())
-    print("Remaining budget:", remaining_budget()) # after set_budget
+    print("Remaining budget:", remaining_budget())  # after set_budget
     print("Biggest expense:", biggest_expense()["note"])
     print("Sync password accepted:", check_sync_password("guess"))
-    print("Summary:", len(expenses), "expenses recorded against a budget of", settings["monthly_budget"])
+    print("Summary:", len(expenses), "expenses recorded against a budget of",
+          settings["monthly_budget"])
 
 
 if __name__ == "__main__":
