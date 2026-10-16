@@ -1,3 +1,25 @@
+## Submission
+
+**Forked repo:** https://github.com/nehaks28/L5_32_expense_tracker
+
+- **Name:** Neha
+- **SRN:** PES1UG24CS581
+- **Lab:** Lab 5, Static Code Analysis
+
+### Results
+
+| Tool | Before | After |
+|------|--------|-------|
+| Pylint | 5.27/10 | 10.00/10 |
+| Bandit | 1 High, 2 Medium, 1 Low | 0 issues |
+| Flake8 | 4 issues | 0 issues |
+
+### Files
+- `expense_tracker.py`: cleaned version
+- `issues.md`: issue table
+- `reflection.md`: reflection answers
+- `*_before.txt` / `*_report.txt`: static analysis reports before and after
+
 # Lab 5: Static Code Analysis — Personal Expense Tracker
 
 **Your file:** `expense_tracker.py`
